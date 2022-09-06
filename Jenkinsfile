@@ -5,6 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'whoami'
+                sh 'pwd'
+                sh 'yum install -y epel-release'
             }
         }
         stage('Test') {
